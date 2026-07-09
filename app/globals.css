@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    scroll-behavior: smooth;
+  }
+
+  /* Respect users who prefer less motion — disables smooth scroll + CSS animation. */
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+
+  body {
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Anchor offset so sticky nav doesn't cover section headings on jump. */
+  section[id] {
+    scroll-margin-top: 84px;
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-container px-6 sm:px-8;
+  }
+
+  /* Small-caps, letter-spaced editorial label. */
+  .eyebrow {
+    @apply font-sans text-xs font-semibold uppercase tracking-label;
+  }
+
+  .script-label {
+    @apply font-script text-3xl leading-none sm:text-4xl;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-oxblood px-7 py-3.5
+      text-sm font-semibold uppercase tracking-wide text-offwhite transition
+      hover:bg-berry focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2
+      focus-visible:outline-oxblood;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-current
+      px-7 py-3.5 text-sm font-semibold uppercase tracking-wide transition
+      hover:bg-oxblood hover:text-offwhite hover:border-oxblood
+      focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2;
+  }
+}

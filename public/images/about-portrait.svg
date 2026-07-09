@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="800" viewBox="0 0 640 800" role="img"><defs><linearGradient id="pg" x1="0.750" y1="0.067" x2="0.250" y2="0.933"><stop offset="0" stop-color="#DFD2BE"/><stop offset="1" stop-color="#E8C9C4"/></linearGradient></defs><rect width="640" height="800" fill="url(#pg)"/>
+     <g transform="translate(320, 496)" fill="#6E1012" opacity="0.9">
+       <circle cx="0" cy="-160" r="83.2"/>
+       <path d="M -153.6 320 Q -153.6 -16 0 -16 Q 153.6 -16 153.6 320 Z"/>
+     </g>
+     <rect x="0" y="754" width="640" height="46" fill="#0E0E0E" opacity="0.35"/>
+     <text x="320" y="782" fill="#FAF7F2" font-family="Arial, Helvetica, sans-serif" font-size="13" letter-spacing="4" text-anchor="middle">ABOUT PORTRAIT</text></svg>

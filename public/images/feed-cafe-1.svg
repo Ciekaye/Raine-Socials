@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600" role="img"><defs><linearGradient id="fg" x1="0.910" y1="0.213" x2="0.090" y2="0.787"><stop offset="0" stop-color="#8A5A44"/><stop offset="1" stop-color="#6f4636"/></linearGradient></defs><rect width="600" height="600" fill="url(#fg)"/>
+     <g transform="translate(300,348)" fill="#FAF7F2" opacity="0.92">
+      <path d="M -70 -10 h 120 v 30 a60 60 0 0 1 -120 0 Z"/>
+      <path d="M 50 -2 a34 34 0 0 1 0 46" fill="none" stroke="#FAF7F2" stroke-width="12"/>
+    </g>
+    <g stroke="#FAF7F2" stroke-width="6" fill="none" opacity="0.55" stroke-linecap="round">
+      <path d="M 276 308 q 12 -18 0 -36"/>
+      <path d="M 308 308 q 12 -18 0 -36"/>
+    </g>
+    <text x="300" y="566" fill="#FAF7F2" font-family="Georgia, 'Times New Roman', serif" font-size="20" text-anchor="middle" >Brew</text>
+     <text x="300" y="54" fill="#FAF7F2" font-family="Arial, Helvetica, sans-serif" font-size="13" letter-spacing="5" text-anchor="middle">CAFE</text>
+     <line x1="274" y1="70" x2="326" y2="70" stroke="#FAF7F2" stroke-opacity="0.5" stroke-width="1"/></svg>

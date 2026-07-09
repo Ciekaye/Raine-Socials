@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="700" viewBox="0 0 700 700" role="img"><defs><linearGradient id="pc" x1="0.854" y1="0.146" x2="0.146" y2="0.854"><stop offset="0" stop-color="#0E0E0E"/><stop offset="1" stop-color="#2b2b2b"/></linearGradient></defs><rect width="700" height="700" fill="url(#pc)"/>
+     <circle cx="350" cy="280" r="119.00000000000001" fill="#A83250" opacity="0.85"/>
+     <circle cx="350" cy="280" r="70" fill="#FAF7F2" opacity="0.3"/>
+     <rect x="0" y="604" width="700" height="96" fill="#0E0E0E" opacity="0.42"/>
+     <text x="350" y="646" fill="#FAF7F2" font-family="Georgia, 'Times New Roman', serif" font-size="26" text-anchor="middle" >CM Sportswear</text>
+     <text x="350" y="672" fill="#FAF7F2" font-family="Arial, Helvetica, sans-serif" font-size="12" letter-spacing="3" text-anchor="middle">POST 2</text></svg>
