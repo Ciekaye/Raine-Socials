@@ -25,7 +25,7 @@ export default function Tools() {
             "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
         }}
       >
-        <ul className="flex w-max animate-marquee items-center gap-x-16 pr-16 group-hover:[animation-play-state:paused] sm:gap-x-20 md:gap-x-24 md:pr-24">
+        <ul className="flex w-max animate-marquee items-center gap-x-10 pr-10 group-hover:[animation-play-state:paused] sm:gap-x-20 sm:pr-20 md:gap-x-24 md:pr-24">
           {row.map((tool, i) => (
             <li key={`${tool.name}-${i}`} className="shrink-0">
               <Image
@@ -34,7 +34,7 @@ export default function Tools() {
                 width={72}
                 height={72}
                 title={tool.name}
-                className="h-14 w-auto object-contain opacity-60 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0 md:h-16"
+                className="h-8 w-auto object-contain opacity-60 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0 sm:h-12 md:h-16"
               />
             </li>
           ))}
