@@ -2,11 +2,11 @@ import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Services from "@/components/Services";
+import CallToAction from "@/components/CallToAction";
 import Tools from "@/components/Tools";
 import Feeds from "@/components/Feeds";
 import Projects from "@/components/Projects";
 import Metrics from "@/components/Metrics";
-import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -24,7 +24,7 @@ export default function Home() {
           <Feeds />
           <Projects />
           <Metrics />
-          <Contact />
+          <CallToAction />
         </div>
       </main>
       <Footer />

@@ -29,7 +29,7 @@ export const nav = {
     { label: "Work", href: "#work" },
     { label: "Contact", href: "#contact" },
   ],
-  cta: { label: "Work With Me", href: "#contact" },
+  cta: { label: "Work With Me", href: "#book" },
 };
 
 export const hero = {
@@ -93,6 +93,15 @@ export const services = {
     "Audience & Community Engagement",
     "Full Social Media Management",
   ],
+};
+
+export const cta = {
+  label: "Ready when you are",
+  heading: "Let's make your brand impossible to scroll past.",
+  subhead:
+    "Book a free discovery call and I'll map out a social presence that looks the part and grows the numbers.",
+  // Reuses the booking link defined on `contact.primaryCta.href`.
+  button: "Book Now",
 };
 
 export type Tool = { name: string; logo: string };
