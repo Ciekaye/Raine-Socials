@@ -83,10 +83,10 @@ export default function Hero() {
           <motion.h1
             variants={item}
             transition={{ duration: 0.6 }}
-            className="mt-5 text-balance font-display text-4xl font-medium leading-[1.05] sm:text-5xl lg:text-6xl"
+            className="mt-5 text-balance font-display text-3xl font-medium leading-[1.08] sm:text-5xl sm:leading-[1.05] lg:text-6xl"
           >
-            Distinctive brands deserve
-            <br />a distinctive presence.
+            Distinctive brands deserve{" "}
+            <br className="hidden sm:block" />a distinctive presence.
           </motion.h1>
 
           <motion.p
@@ -100,7 +100,7 @@ export default function Hero() {
           <motion.p
             variants={item}
             transition={{ duration: 0.6 }}
-            className="mt-4 whitespace-nowrap text-sm leading-relaxed text-offwhite/75 sm:text-base lg:text-lg"
+            className="mt-4 max-w-md text-sm leading-relaxed text-offwhite/75 sm:text-base lg:max-w-none lg:whitespace-nowrap lg:text-lg"
           >
             {hero.line}
           </motion.p>
