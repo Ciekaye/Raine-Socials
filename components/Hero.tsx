@@ -52,21 +52,23 @@ export default function Hero() {
             fully covers the section and never exposes a seam at the edges. */}
         <div aria-hidden className="pointer-events-none absolute -inset-[10%] z-0">
           <HeroShaderBackground className="absolute inset-0 h-full w-full" />
-          {/* Darken toward the copy side so the off-white text stays legible over the shader. */}
-          <div className="absolute inset-0 bg-gradient-to-r from-oxblood/85 via-oxblood/45 to-oxblood/10" />
-          <div className="absolute inset-0 bg-gradient-to-t from-ink/40 via-transparent to-oxblood/25" />
+          {/* Centered vertical veil — darkest through the middle band where the
+              headline sits, so the off-white text stays legible over the shader
+              now that the layout is centered rather than left-weighted. */}
+          <div className="absolute inset-0 bg-gradient-to-b from-oxblood/45 via-oxblood/65 to-oxblood/45" />
+          <div className="absolute inset-0 bg-gradient-to-t from-ink/40 via-transparent to-ink/20" />
         </div>
 
         <motion.div
           style={{ y }}
-          className="container-x relative z-10 grid min-h-[92vh] grid-cols-1 items-center gap-12 pb-16 pt-28 md:min-h-screen md:grid-cols-2 md:gap-8 md:pt-24"
+          className="container-x relative z-10 flex min-h-[92vh] flex-col items-center justify-center gap-10 pb-16 pt-28 text-center md:min-h-screen md:pt-24"
         >
-        {/* Copy */}
+        {/* Centered copy stack */}
         <motion.div
           initial="hidden"
           animate="show"
           transition={{ staggerChildren: 0.12, delayChildren: 0.1 }}
-          className="max-w-xl"
+          className="flex max-w-3xl flex-col items-center"
         >
           <motion.p
             variants={item}
@@ -81,9 +83,10 @@ export default function Hero() {
           <motion.h1
             variants={item}
             transition={{ duration: 0.6 }}
-            className="mt-5 font-display text-4xl font-medium leading-[1.08] sm:text-5xl lg:text-6xl"
+            className="mt-5 text-balance font-display text-4xl font-medium leading-[1.05] sm:text-5xl lg:text-6xl"
           >
-            {hero.headline}
+            Distinctive brands deserve
+            <br />a distinctive presence.
           </motion.h1>
 
           <motion.p
@@ -97,7 +100,7 @@ export default function Hero() {
           <motion.p
             variants={item}
             transition={{ duration: 0.6 }}
-            className="mt-4 max-w-md text-base leading-relaxed text-offwhite/75 sm:text-lg"
+            className="mt-4 whitespace-nowrap text-sm leading-relaxed text-offwhite/75 sm:text-base lg:text-lg"
           >
             {hero.line}
           </motion.p>
@@ -105,7 +108,7 @@ export default function Hero() {
           <motion.div
             variants={item}
             transition={{ duration: 0.6 }}
-            className="mt-9 flex flex-wrap items-center gap-x-7 gap-y-4"
+            className="mt-9 flex flex-wrap items-center justify-center gap-x-7 gap-y-4"
           >
             <a
               href={hero.primaryCta.href}
@@ -126,26 +129,52 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
-        {/* Portrait collage */}
+        {/* Three-image collage, centered below the headline — larger straight
+            card in the middle flanked by two smaller tilted "polaroid" cards. */}
         <motion.div
           initial={reduce ? false : { opacity: 0, scale: 0.96 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-          className="relative mx-auto w-full max-w-sm md:max-w-md"
+          className="relative flex w-full max-w-2xl items-center justify-center"
         >
-          <div
-            aria-hidden
-            className="absolute inset-0 translate-x-4 translate-y-4 rotate-3 rounded-2xl border border-offwhite/25"
-          />
-          <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-offwhite/20 shadow-2xl">
-            <Image
-              src={hero.portrait.src}
-              alt={hero.portrait.alt}
-              fill
-              priority
-              sizes="(max-width: 768px) 80vw, 40vw"
-              className="object-cover"
-            />
+          {/* Left */}
+          <div className="relative z-10 -mr-6 w-[30%] -rotate-6 translate-y-6 rounded-lg border border-offwhite/15 bg-cream p-1.5 shadow-2xl sm:-mr-8">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-md">
+              <Image
+                src="/images/feed-fashion-1.svg"
+                alt="Fashion campaign content"
+                fill
+                sizes="(max-width: 768px) 26vw, 12vw"
+                className="object-cover"
+              />
+            </div>
+          </div>
+
+          {/* Center */}
+          <div className="relative z-20 w-[38%] rounded-lg border border-offwhite/15 bg-cream p-2 shadow-2xl">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-md">
+              <Image
+                src={hero.portrait.src}
+                alt={hero.portrait.alt}
+                fill
+                priority
+                sizes="(max-width: 768px) 34vw, 16vw"
+                className="object-cover"
+              />
+            </div>
+          </div>
+
+          {/* Right */}
+          <div className="relative z-10 -ml-6 w-[30%] rotate-6 translate-y-6 rounded-lg border border-offwhite/15 bg-cream p-1.5 shadow-2xl sm:-ml-8">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-md">
+              <Image
+                src="/images/feed-beauty-1.svg"
+                alt="Beauty brand content"
+                fill
+                sizes="(max-width: 768px) 26vw, 12vw"
+                className="object-cover"
+              />
+            </div>
           </div>
         </motion.div>
         </motion.div>
