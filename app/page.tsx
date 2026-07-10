@@ -14,6 +14,10 @@ export default function Home() {
     <>
       <Nav />
       <main>
+        {/* Scroll anchor for the logo/"back to top". Kept above the sticky
+            hero because a sticky element is always pinned to the viewport top,
+            so anchoring to it wouldn't scroll the page back up. */}
+        <div id="top" aria-hidden />
         <Hero />
         {/* Everything after the hero forms one stacking layer that scrolls up
             over the pinned hero, creating the sticky-reveal overlap. */}

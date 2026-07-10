@@ -54,7 +54,14 @@ export default function Nav() {
               {link.label}
             </a>
           ))}
-          <a href={nav.cta.href} className="btn-primary !py-2.5 !px-5">
+          <a
+            href={nav.cta.href}
+            className={`btn-primary !py-2.5 !px-5 transition-colors duration-300 ${
+              solid
+                ? "shadow-sm"
+                : "ring-1 ring-offwhite/70 hover:ring-offwhite"
+            }`}
+          >
             {nav.cta.label}
           </a>
         </div>

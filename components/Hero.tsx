@@ -39,7 +39,6 @@ export default function Hero() {
 
   return (
     <section
-      id="top"
       ref={heroRef}
       className="sticky top-0 z-0 overflow-hidden bg-oxblood text-offwhite"
     >
