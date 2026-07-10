@@ -46,8 +46,11 @@ export default function Hero() {
       {/* Everything inside scales down as one unit (bg + copy) so the hero
           visibly recedes behind the incoming About panel. */}
       <motion.div style={{ scale, transformOrigin: "center" }}>
-        {/* Animated shader background + contrast overlays (decorative) */}
-        <div aria-hidden className="pointer-events-none absolute inset-0 z-0">
+        {/* Animated shader background + contrast overlays (decorative).
+            Sized larger than the section (-inset-[10%] = 120%) so that when the
+            wrapper scales down to 0.86 during the recede, the background still
+            fully covers the section and never exposes a seam at the edges. */}
+        <div aria-hidden className="pointer-events-none absolute -inset-[10%] z-0">
           <HeroShaderBackground className="absolute inset-0 h-full w-full" />
           {/* Darken toward the copy side so the off-white text stays legible over the shader. */}
           <div className="absolute inset-0 bg-gradient-to-r from-oxblood/85 via-oxblood/45 to-oxblood/10" />
@@ -68,7 +71,9 @@ export default function Hero() {
           <motion.p
             variants={item}
             transition={{ duration: 0.6 }}
-            className="eyebrow text-berry"
+            // Light rose (berry lightened) so the eyebrow reads on the dark
+            // oxblood hero; plain text-berry is too low-contrast here.
+            className="eyebrow text-[#E7A9B4]"
           >
             {hero.eyebrow}
           </motion.p>
